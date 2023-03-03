@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "3.8"
+
+
+before_script:
+   - pip install -r requirements.txt
+
+script:
+  # Run Black formatter
+  - black --check --diff .
+
+  # Run Flake8 linter
+  - flake8 .
+
+  # Run Django tests
+  - python manage.py test
