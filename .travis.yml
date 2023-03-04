@@ -4,12 +4,16 @@ python:
   - "3.8"
 
 
-before_script:
+install:
    - pip install -r requirements.txt
+
+before_script:
+  - python manage.py migrate
+  - python manage.py collectstatic --noinput
 
 script:
   # Run Black formatter
-  - black --check --diff .
+  - black --check .
 
   # Run Flake8 linter
   - flake8 --extend-ignore E501,F401,F811
