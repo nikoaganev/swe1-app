@@ -30,3 +30,5 @@ deploy:
   app: "polls"
   env: "env-niko"
   bucket_name: "elasticbeanstalk-us-west-2-632586137667"
+  on:
+    branch: main
