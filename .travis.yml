@@ -18,7 +18,7 @@ script:
   - black --check .
 
   # Run Flake8 linter
-  - flake8 --extend-ignore E501,F401,F811
+  - flake8 .
   # Run Django tests
   - coverage run manage.py test
   
