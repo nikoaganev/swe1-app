@@ -4,15 +4,12 @@ python:
   - "3.8"
 
 
-install:
-   - pip install -r requirements.txt
-
 before_script:
-  - python manage.py migrate
+   - pip install -r requirements.txt
 
 script:
   # Run Black formatter
-  - black --check .
+  - black --check --diff .
 
   # Run Flake8 linter
   - flake8 --extend-ignore E501,F401,F811
