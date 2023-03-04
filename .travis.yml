@@ -26,7 +26,7 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_ACCESS_KEY
   region: "us-west-2"
-  app: "polls"
+  app: "niko-tutorial"
   env: "env-niko"
   bucket_name: "elasticbeanstalk-us-west-2-632586137667"
   on:
