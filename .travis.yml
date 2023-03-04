@@ -15,4 +15,4 @@ script:
   - flake8 --extend-ignore E501,F401,F811
 
   # Run Django tests
-  - python manage.py test
+  - coverage run manage.py test
